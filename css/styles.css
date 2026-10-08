@@ -1,0 +1,292 @@
+/* ============================================
+   BASE STYLES — element selectors
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a2a44;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin: 0.6rem 0;
+}
+
+/* ============================================
+   HEADER & NAV
+   ============================================ */
+header {
+  background-color: #1a2a44;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+}
+
+nav {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #3498db;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   MAIN & SECTIONS (class selector)
+   ============================================ */
+main {
+  padding: 1rem;
+}
+
+.content-section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin: 1.2rem auto;
+  max-width: 900px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ID selector — unique to the photos section */
+#photos {
+  background-color: #eef6fb;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+/* ============================================
+   TABLE
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  color: #1a2a44;
+}
+
+th, td {
+  border: 1px solid #b8c2cc;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #1a2a44;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f6f8;
+}
+
+/* ============================================
+   PHOTO GALLERY
+   ============================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e8ec;
+}
+
+/* ============================================
+   MEDIA (video + audio)
+   ============================================ */
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.8rem 0;
+  border-radius: 6px;
+  background-color: #000;
+}
+
+audio {
+  width: 100%;
+  max-width: 480px;
+  margin: 0.8rem 0;
+}
+
+/* ============================================
+   FORM
+   ============================================ */
+form {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 0.9rem;
+  color: #1a2a44;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #b8c2cc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #3498db;
+  border-color: #3498db;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.6rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #1d6fa5;
+  outline: 2px solid #1a2a44;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background-color: #1a2a44;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #7fc4ff;
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff;
+}
+
+/* ============================================
+   RESPONSIVE — narrow screens
+   ============================================ */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  header {
+    padding: 1rem 0.5rem;
+  }
+  nav a {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.9rem;
+  }
+  .content-section {
+    padding: 1rem;
+    margin: 0.8rem auto;
+  }
+}
