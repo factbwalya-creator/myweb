@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fact Bwalya — Web Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Fact Bwalya — Web Portfolio</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#hobbies">My Hobbies</a>
+      <a href="#learning">My Learning Plan</a>
+      <a href="#photos">My Photos</a>
+      <a href="#media">My Media</a>
+      <a href="#contact">Contact</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">
+        Learn Web Development (MDN)
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT ME -->
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        My name is Fact Bwalya and I am a first-year student passionate about
+        technology and the way websites are built. I grew up curious about how
+        the internet works behind the scenes, and that curiosity is what led me
+        to study web development. Outside of class I enjoy listening to music,
+        playing chess, and spending quality time with my girlfriend. Chess has
+        taught me to think ahead and solve problems calmly, which I find very
+        useful when debugging code. I am taking this course because I want to
+        build my own portfolio, learn HTML, CSS, and JavaScript properly, and
+        eventually work as a front-end developer. So far I have learned how to
+        structure a page with semantic HTML, and I am excited to keep improving
+        my styling skills with CSS this semester.
+      </p>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="content-section">
+      <h2>My Hobbies</h2>
+      <p>Here are three things I enjoy doing in my free time:</p>
+      <ul>
+        <li>Listening to music — it helps me relax and focus while studying.</li>
+        <li>Playing chess — a game that sharpens my thinking and patience.</li>
+        <li>Spending time with my girlfriend — my favourite way to unwind.</li>
+      </ul>
+    </section>
+
+    <!-- LEARNING PLAN + TABLE -->
+    <section id="learning" class="content-section">
+      <h2>My Learning Plan</h2>
+      <p>Here are the realistic steps I will take to improve my web skills:</p>
+      <ol>
+        <li>Complete one HTML and CSS lesson per week on MDN Web Docs.</li>
+        <li>Rebuild one simple website from scratch every two weeks for practice.</li>
+        <li>Start learning JavaScript basics by month two, focusing on DOM manipulation.</li>
+        <li>Publish all my small projects to GitHub so I can track my progress.</li>
+      </ol>
+
+      <h3>My Weekly Schedule</h3>
+      <table>
+        <caption>Weekly Web Learning Plan</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Practice Task</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML structure</td>
+            <td>Build a page with header, main, and footer</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS layout</td>
+            <td>Recreate a two-column layout using Flexbox or Grid</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>JavaScript basics</td>
+            <td>Add a button that changes text on click</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>Review &amp; publish</td>
+            <td>Push the week's project to GitHub</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PHOTOS -->
+    <section id="photos" class="content-section">
+      <h2>My Photos</h2>
+      <p>Three photos that show a bit of who I am and what I enjoy.</p>
+      <div class="gallery">
+        <figure>
+          <img src="images/photo1.jpg" alt="Fact Bwalya sitting outdoors in a relaxed pose">
+          <figcaption>Photo 1: A candid shot of me on 17th August (MY BIRTHDAY).</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo2.jpg" alt="Fact Bwalya standing outdoors and looking at his phone">
+          <figcaption>Photo 2: Checking my phone during a walk outside.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo3.jpg" alt="Portrait of Fact Bwalya wearing a light shirt">
+          <figcaption>Photo 3: A close-up portrait of me.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="media" class="content-section">
+      <h2>My Media</h2>
+
+      <h3>My Introduction Video</h3>
+      <video controls width="640">
+        <source src="videos/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>
+        <strong>Transcript:</strong> Hi, my name is Fact Bwalya. I am a
+        first-year student in the ICT programme. One web skill I really hope to
+        learn this semester is how to build responsive layouts with CSS, so
+        that my websites look good on both phones and computers. I am looking
+        forward to improving my coding skills step by step.
+      </p>
+
+      <h3>My Hobby Audio Clip</h3>
+      <audio controls>
+        <source src="videos/voice.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <p>
+        In this short clip I describe one of my favourite hobbies — playing
+        chess — and explain why it helps me stay focused and think ahead in
+        everyday life.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>
+        Fill in the form below to get in touch.git 
+      </p>
+      <form action="#" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" name="topic">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p>You can also reach me by email: factbwalya@gmail.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Fact Bwalya. Built as part of ICT251.</p>
+    <p><a href="#about">Back to top</a></p>
+  </footer>
+</body>
+</html>
