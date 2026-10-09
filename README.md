@@ -1,8 +1,8 @@
 # Fact Bwalya — Web Portfolio
 
 My personal student portfolio, built for the ICT251 Web Technologies module
-(Mulungushi University). This site is a demonstration of semantic HTML,
-responsive CSS, and interactive JavaScript.
+(Mulungushi University). This site demonstrates semantic HTML, responsive CSS,
+and interactive JavaScript.
 
 **Live site:** https://myweb.onrender.com
 **Repository:** https://github.com/factbwalya-creator/myweb
