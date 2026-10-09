@@ -64,3 +64,30 @@ Open the live site (or `index.html` locally via Live Server) and try:
    click to open the links.
 
 ## Folder structure
+myweb/
+├── index.html
+├── README.md
+├── css/
+│ └── styles.css
+├── js/
+│ └── script.js
+├── images/
+│ ├── photo1.jpg
+│ ├── photo2.jpg
+│ └── photo3.jpg
+└── videos/
+├── intro.mp4
+└── voice.mp3
+
+
+## Sources and references
+
+- MDN Web Docs — HTML, CSS and JavaScript reference: https://developer.mozilla.org/
+- FreeCodeCamp — used for revising JavaScript events and DOM methods.
+- All written content, photos, video and audio are my own work.
+
+## Author
+
+Fact Bwalya
+ICT251 — Web Technologies
+Mulungushi University
