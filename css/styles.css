@@ -290,3 +290,335 @@ footer a:focus {
     margin: 0.8rem auto;
   }
 }
+/* =========================================================
+   ACTIVITY 3 — New styles
+   ========================================================= */
+
+/* HERO */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #2a1a5e 0%, #6a4ff0 100%);
+  color: #fff;
+  border-left-color: #6a4ff0;
+  padding: 3rem 1.5rem;
+}
+.hero h2 {
+  color: #ffd166;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-name {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+.hero-programme {
+  font-size: 1.1rem;
+  color: #d9cfff;
+  margin-bottom: 1rem;
+}
+.hero-intro {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+}
+.hero-btn {
+  display: inline-block;
+  background: #ffd166;
+  color: #2a1a5e;
+  padding: 0.8rem 1.8rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background: #fff;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* MENU TOGGLE (mobile nav) */
+.menu-toggle {
+  display: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background: #ffd166;
+  color: #2a1a5e;
+  outline: none;
+}
+
+/* GALLERY CONTROLS */
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.gallery-controls button {
+  background: #6a4ff0;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.gallery-controls button:hover:not(:disabled),
+.gallery-controls button:focus:not(:disabled) {
+  background: #2a1a5e;
+  outline: 2px solid #ffd166;
+}
+.gallery-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.gallery-status {
+  font-weight: bold;
+  color: #2a1a5e;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.project-card {
+  background: #f9f7ff;
+  border: 1px solid #e0dbf7;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.project-card h3 {
+  margin-top: 0;
+}
+.expand-btn {
+  background: #6a4ff0;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.expand-btn:hover,
+.expand-btn:focus {
+  background: #2a1a5e;
+  outline: 2px solid #ffd166;
+}
+.project-details {
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  background: #fff;
+  border-left: 3px solid #6a4ff0;
+  font-size: 0.9rem;
+}
+
+/* SEARCH */
+.filter-controls {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #d0d7de;
+}
+.filter-controls label {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+#project-search {
+  padding: 0.5rem;
+  border: 2px solid #e0dbf7;
+  border-radius: 6px;
+  width: 250px;
+  max-width: 100%;
+}
+#project-search:focus {
+  outline: none;
+  border-color: #6a4ff0;
+}
+#reset-search {
+  background: #b8c2cc;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+#reset-search:hover,
+#reset-search:focus {
+  background: #6a4ff0;
+  outline: none;
+}
+.search-message {
+  font-style: italic;
+  color: #6a4ff0;
+  margin-top: 0.5rem;
+}
+
+/* CALCULATOR */
+.calculator {
+  background: #f9f7ff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0dbf7;
+  margin-top: 1rem;
+}
+.calculator input {
+  padding: 0.5rem;
+  border: 2px solid #e0dbf7;
+  border-radius: 6px;
+  width: 100px;
+  margin-right: 1rem;
+}
+.calculator input:focus {
+  outline: none;
+  border-color: #6a4ff0;
+}
+#calc-hours {
+  background: #6a4ff0;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+#calc-hours:hover,
+#calc-hours:focus {
+  background: #2a1a5e;
+  outline: 2px solid #ffd166;
+}
+.calc-result {
+  font-weight: bold;
+  margin-top: 0.8rem;
+}
+.calc-result.error-text { color: #d6336c; }
+.calc-result.success-text { color: #2bb673; }
+
+/* FORM ERRORS + PREVIEW */
+.error {
+  color: #d6336c;
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0;
+  min-height: 1.2rem;
+}
+.form-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #eefcf5;
+  border-left: 4px solid #2bb673;
+  border-radius: 6px;
+}
+.form-preview h3 {
+  color: #2bb673;
+  margin-top: 0;
+}
+.form-note {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* DARK THEME */
+body.dark {
+  background: #12121a;
+  color: #eaeaf0;
+}
+body.dark .content-section {
+  background: #1c1c28;
+  color: #eaeaf0;
+  border-color: #33334a;
+}
+body.dark h1, body.dark h2, body.dark h3 {
+  color: #ffd166;
+}
+body.dark .hero {
+  background: linear-gradient(135deg, #0d0d15 0%, #2a1a5e 100%);
+}
+body.dark figcaption {
+  background: #23232f;
+  color: #c5c5d0;
+}
+body.dark .project-card,
+body.dark .calculator,
+body.dark figure {
+  background: #23232f;
+  border-color: #33334a;
+}
+body.dark .project-details {
+  background: #1a1a24;
+}
+body.dark input,
+body.dark textarea {
+  background: #23232f;
+  color: #eaeaf0;
+  border-color: #444;
+}
+body.dark .form-preview {
+  background: #1a2a20;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  /* Show hamburger, hide nav by default */
+  .menu-toggle {
+    display: inline-block;
+  }
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  #main-nav.open {
+    display: flex;
+  }
+  #main-nav a {
+    display: block;
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+  .hero-name {
+    font-size: 1.8rem;
+  }
+  .gallery-controls {
+    flex-wrap: wrap;
+  }
+  .calculator input {
+    width: 80px;
+  }
+  #project-search {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+}

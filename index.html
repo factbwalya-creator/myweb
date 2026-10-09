@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fact Bwalya — Web Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Fact Bwalya — Web Portfolio</h1>
-    <nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      🌙 Dark mode
+    </button>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+      ☰ Menu
+    </button>
+    <nav id="main-nav">
+      <a href="#hero">Home</a>
       <a href="#about">About Me</a>
       <a href="#hobbies">My Hobbies</a>
-      <a href="#learning">My Learning Plan</a>
+      <a href="#projects">Projects</a>
+      <a href="#learning">Learning Plan</a>
       <a href="#photos">My Photos</a>
       <a href="#media">My Media</a>
       <a href="#contact">Contact</a>
@@ -23,6 +32,18 @@
   </header>
 
   <main>
+    <!-- HERO -->
+    <section id="hero" class="content-section hero">
+      <h2>Welcome to My Portfolio</h2>
+      <p class="hero-name">Fact Bwalya</p>
+      <p class="hero-programme">ICT251 — Web Technologies Student</p>
+      <p class="hero-intro">
+        A curious first-year student passionate about the web, learning to build
+        clean and useful websites one step at a time.
+      </p>
+      <a href="#projects" class="hero-btn">View My Projects</a>
+    </section>
+
     <!-- ABOUT ME -->
     <section id="about" class="content-section">
       <h2>About Me</h2>
@@ -52,7 +73,43 @@
       </ul>
     </section>
 
-    <!-- LEARNING PLAN + TABLE -->
+    <!-- PROJECTS / SKILLS -->
+    <section id="projects" class="content-section">
+      <h2>My Projects &amp; Skills</h2>
+      <p>Here are some of the things I have learned and built so far this semester.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Semantic HTML Portfolio</h3>
+          <p>Built a full personal website using header, nav, main, section and footer with proper heading hierarchy.</p>
+          <button class="expand-btn" type="button">Show details</button>
+          <p class="project-details" hidden>Learned to use figure, figcaption, table, form, and video/audio elements — all with accessibility in mind (alt text, labels, transcripts).</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Responsive CSS Layout</h3>
+          <p>Styled a multi-section site with a coherent colour palette and a mobile-friendly layout.</p>
+          <button class="expand-btn" type="button">Show details</button>
+          <p class="project-details" hidden>Used Flexbox, Grid, media queries, hover and focus states, and demonstrated the box model with padding, margin and borders.</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Interactive JavaScript</h3>
+          <p>Added interactive features — form validation, gallery viewer, theme switch, and a calculator.</p>
+          <button class="expand-btn" type="button">Show details</button>
+          <p class="project-details" hidden>Practised events, DOM manipulation, arrays, functions, and using textContent for safe display of user input.</p>
+        </article>
+      </div>
+
+      <div class="filter-controls">
+        <label for="project-search">Search projects:</label>
+        <input type="text" id="project-search" placeholder="Type to filter...">
+        <button id="reset-search" type="button">Reset</button>
+        <p id="search-message" class="search-message"></p>
+      </div>
+    </section>
+
+    <!-- LEARNING PLAN + TABLE + CALCULATOR -->
     <section id="learning" class="content-section">
       <h2>My Learning Plan</h2>
       <p>Here are the realistic steps I will take to improve my web skills:</p>
@@ -96,6 +153,19 @@
           </tr>
         </tbody>
       </table>
+
+      <h3>Study Hours Calculator</h3>
+      <p>Estimate how many hours you will study per week.</p>
+      <div class="calculator">
+        <label for="hours-per-day">Hours per day:</label>
+        <input type="number" id="hours-per-day" min="0" step="0.5" placeholder="e.g. 2">
+
+        <label for="days-per-week">Days per week (1–7):</label>
+        <input type="number" id="days-per-week" min="1" max="7" placeholder="e.g. 5">
+
+        <button id="calc-hours" type="button">Calculate Weekly Hours</button>
+        <p id="calc-result" class="calc-result" role="status"></p>
+      </div>
     </section>
 
     <!-- PHOTOS -->
@@ -105,7 +175,7 @@
       <div class="gallery">
         <figure>
           <img src="images/photo1.jpg" alt="Fact Bwalya sitting outdoors in a relaxed pose">
-          <figcaption>Photo 1: A candid shot of me on 17th August (MY BIRTHDAY).</figcaption>
+          <figcaption>Photo 1: A candid shot of me on 17th August (my birthday).</figcaption>
         </figure>
         <figure>
           <img src="images/photo2.jpg" alt="Fact Bwalya standing outdoors and looking at his phone">
@@ -150,31 +220,42 @@
     <!-- CONTACT -->
     <section id="contact" class="content-section">
       <h2>Contact</h2>
-      <p>
-        Fill in the form below to get in touch.git 
-      </p>
-      <form action="#" method="post">
+      <p>Fill in the form below to get in touch.</p>
+
+      <form id="contact-form" action="#" method="post" novalidate>
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
+        <p class="error" id="name-error"></p>
 
         <label for="email">Your Email:</label>
         <input type="email" id="email" name="email" required>
+        <p class="error" id="email-error"></p>
 
         <label for="topic">Topic:</label>
         <input type="text" id="topic" name="topic">
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
+        <p class="error" id="message-error"></p>
 
         <button type="submit">Send Message</button>
       </form>
+
+      <div id="form-preview" class="form-preview" hidden></div>
+
+      <p class="form-note">Browser demonstration only — no message is sent.</p>
       <p>You can also reach me by email: factbwalya@gmail.com</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Fact Bwalya. Built as part of ICT251.</p>
-    <p><a href="#about">Back to top</a></p>
+    <p>
+      <a href="https://github.com/factbwalya-creator/myweb" target="_blank" rel="noopener">
+        View Source on GitHub
+      </a>
+    </p>
+    <p><a href="#hero">Back to top</a></p>
   </footer>
 </body>
 </html>
